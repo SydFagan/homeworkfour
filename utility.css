@@ -1,0 +1,77 @@
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 150%);
+  opacity: 0;
+  background-color: #f44336; /* Red */
+  color: white;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  will-change: transform, opacity;
+}
+
+.toast.show {
+  transform: translate(-50%, 0);
+  /* Show the alert */
+  opacity: 1;
+}
+.toast.hide {
+  transform: translate(-50%, 150%); /* Hide the alert */
+  opacity: 0;
+}
+
+.alertHolder {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: 1000;
+  background-color: rgba(114, 114, 114, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.alertHolder .alert-callout {
+  max-width: 60%;
+  position: relative;
+  background-color: rgb(140, 152, 170);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.alertHolder .x-close-alert {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.alertHolder .button-bar {
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.alertHolder .btn-confirm {
+  padding: 10px 30px;
+  background: #430f04f5;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.alertHolder .btn-confirm {
+  padding: 10px 30px;
+  background: #722617f5;
+  border-radius: 5px;
+  cursor: pointer;
+}

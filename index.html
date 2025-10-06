@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User | Feedback</title>
+    <link rel="stylesheet" href="css/utility.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="#">HOME</a>
+      <a href="about.html">About</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div id="app">
+      <h1>User Feedback</h1>
+      <form id="feedbackForm">
+        <label for="username">Name:</label>
+        <input
+          type="text"
+          id="username"
+          maxlength="10"
+          placeholder="Enter your name"
+          name="username"
+          required
+        />
+        <label for="comments">Comments:</label>
+        <textarea
+          id="comments"
+          name="comments"
+          placeholder="Enter your comments here..."
+          required
+        ></textarea>
+        <button type="submit">Submit Feedback</button>
+      </form>
+      <div id="feedbackList">
+        <h2>Feedback Received:</h2>
+        <ul></ul>
+      </div>
+    </div>
+
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script type="module" src="lib/utility.js"></script>
+    <script type="module" src="app/app.js"></script>
+  </body>
+</html>
